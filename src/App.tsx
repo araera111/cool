@@ -2,5 +2,15 @@ import './App.css';
 
 export const App = () => {
   const a = '';
-  return <div>App</div>;
+  const users = ['tanaka', 'masa'];
+  return (
+    <div className="px-2 bg-blue-400 container mx-auto">
+      <div>App</div>
+      <div>
+        {users.map((i) => (
+          <div key={i}>{i}</div>
+        ))}
+      </div>
+    </div>
+  );
 };
